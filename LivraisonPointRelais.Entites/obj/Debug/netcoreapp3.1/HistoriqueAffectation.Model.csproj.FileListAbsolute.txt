@@ -1,0 +1,12 @@
+C:\Users\s644760\Source\Repos\HistoriqueAffectation\HistoriqueAffectation.Entites\bin\Debug\netcoreapp3.1\HistoriqueAffectation.Model.deps.json
+C:\Users\s644760\Source\Repos\HistoriqueAffectation\HistoriqueAffectation.Entites\bin\Debug\netcoreapp3.1\HistoriqueAffectation.Model.dll
+C:\Users\s644760\Source\Repos\HistoriqueAffectation\HistoriqueAffectation.Entites\obj\Debug\netcoreapp3.1\HistoriqueAffectation.Model.csprojAssemblyReference.cache
+C:\Users\s644760\Source\Repos\HistoriqueAffectation\HistoriqueAffectation.Entites\obj\Debug\netcoreapp3.1\HistoriqueAffectation.Model.AssemblyInfoInputs.cache
+C:\Users\s644760\Source\Repos\HistoriqueAffectation\HistoriqueAffectation.Entites\obj\Debug\netcoreapp3.1\HistoriqueAffectation.Model.AssemblyInfo.cs
+C:\Users\s644760\Source\Repos\HistoriqueAffectation\HistoriqueAffectation.Entites\bin\Debug\netcoreapp3.1\HistoriqueAffectation.Model.runtimeconfig.json
+C:\Users\s644760\Source\Repos\HistoriqueAffectation\HistoriqueAffectation.Entites\bin\Debug\netcoreapp3.1\HistoriqueAffectation.Model.runtimeconfig.dev.json
+C:\Users\s644760\Source\Repos\HistoriqueAffectation\HistoriqueAffectation.Entites\obj\Debug\netcoreapp3.1\HistoriqueAffectation.Model.genruntimeconfig.cache
+C:\Users\s644760\Source\Repos\HistoriqueAffectation\HistoriqueAffectation.Entites\bin\Debug\netcoreapp3.1\HistoriqueAffectation.Model.pdb
+C:\Users\s644760\Source\Repos\HistoriqueAffectation\HistoriqueAffectation.Entites\obj\Debug\netcoreapp3.1\HistoriqueAffectation.Model.csproj.CoreCompileInputs.cache
+C:\Users\s644760\Source\Repos\HistoriqueAffectation\HistoriqueAffectation.Entites\obj\Debug\netcoreapp3.1\HistoriqueAffectation.Model.dll
+C:\Users\s644760\Source\Repos\HistoriqueAffectation\HistoriqueAffectation.Entites\obj\Debug\netcoreapp3.1\HistoriqueAffectation.Model.pdb
