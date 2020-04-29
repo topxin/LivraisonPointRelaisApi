@@ -1,7 +1,7 @@
 using AutoMapper;
-using HistoriqueAffectation.Api.MapperProfiles;
-using HistoriqueAffectation.Data.Repositories;
-using HistoriqueAffectation.Model.Data;
+using LivraisonPointRelais.Api.MapperProfiles;
+using LivraisonPointRelais.Data.Repositories;
+using LivraisonPointRelais.Model.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -9,7 +9,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
-namespace HistoriqueAffectation.Api
+namespace LivraisonPointRelais.Api
 {
     public class Startup
     {

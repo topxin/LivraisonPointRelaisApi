@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace HistoriqueAffectation.Model.Entites
+namespace LivraisonPointRelais.Model.Entites
 {
     public class PointRelais
     {

@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using AutoMapper;
-using HistoriqueAffectation.Data.Dto;
-using HistoriqueAffectation.Data.Repositories;
-using HistoriqueAffectation.Extensions.ExtensionMethodes;
+using LivraisonPointRelais.Data.Dto;
+using LivraisonPointRelais.Data.QueryParameters;
+using LivraisonPointRelais.Data.Repositories;
+using LivraisonPointRelais.Extensions.ExtensionMethodes;
 using Microsoft.AspNetCore.Mvc;
 
-namespace HistoriqueAffectation.Api.Controllers
+namespace LivraisonPointRelais.Api.Controllers
 {
     [ApiController]
     [Route("api/produits")]
@@ -23,9 +24,9 @@ namespace HistoriqueAffectation.Api.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetProduits()
+        public async Task<IActionResult> GetProduits([FromQuery] ProduitsParameters produitsParameters)
         {
-            var produits = await _produitRepository.GetProduitsAsync();
+            var produits = await _produitRepository.GetProduitsAsync(produitsParameters);
             var produitsDto = _mapper.Map<IEnumerable<ProduitDto>>(produits);
             return Ok(produitsDto);
         }

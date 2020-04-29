@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using AutoMapper;
-using HistoriqueAffectation.Data.Dto;
-using HistoriqueAffectation.Data.Repositories;
+using LivraisonPointRelais.Data.Dto;
+using LivraisonPointRelais.Data.Repositories;
 using Microsoft.AspNetCore.Mvc;
 
-namespace HistoriqueAffectation.Api.Controllers
+namespace LivraisonPointRelais.Api.Controllers
 {
     [ApiController]
     [Route("api/clients")]

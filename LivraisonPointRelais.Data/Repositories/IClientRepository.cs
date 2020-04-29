@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using HistoriqueAffectation.Model.Entites;
+using LivraisonPointRelais.Model.Entites;
 
-namespace HistoriqueAffectation.Data.Repositories
+namespace LivraisonPointRelais.Data.Repositories
 {
     public interface IClientRepository
     {

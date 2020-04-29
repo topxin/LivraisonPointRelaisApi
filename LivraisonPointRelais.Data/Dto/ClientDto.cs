@@ -1,7 +1,6 @@
 ﻿using System;
-using HistoriqueAffectation.Model.Entites.Reference;
 
-namespace HistoriqueAffectation.Data.Dto
+namespace LivraisonPointRelais.Data.Dto
 {
     public class ClientDto
     {

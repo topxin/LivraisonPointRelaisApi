@@ -1,4 +1,4 @@
-﻿namespace HistoriqueAffectation.Model.Entites.Reference
+﻿namespace LivraisonPointRelais.Model.Entites.Reference
 {
     public enum Sexe
     {

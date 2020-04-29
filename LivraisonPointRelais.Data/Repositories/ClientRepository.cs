@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using HistoriqueAffectation.Model.Data;
-using HistoriqueAffectation.Model.Entites;
+using LivraisonPointRelais.Model.Data;
+using LivraisonPointRelais.Model.Entites;
 using Microsoft.EntityFrameworkCore;
 
-namespace HistoriqueAffectation.Data.Repositories
+namespace LivraisonPointRelais.Data.Repositories
 {
     public class ClientRepository: IClientRepository
     {

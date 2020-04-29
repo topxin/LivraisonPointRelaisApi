@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace HistoriqueAffectation.Model.Entites
+namespace LivraisonPointRelais.Model.Entites
 {
     public class Produit
     {

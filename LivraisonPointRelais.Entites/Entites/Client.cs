@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using HistoriqueAffectation.Model.Entites.Reference;
+using LivraisonPointRelais.Model.Entites.Reference;
 
-namespace HistoriqueAffectation.Model.Entites
+namespace LivraisonPointRelais.Model.Entites
 {
     public class Client
     {

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace HistoriqueAffectation.Extensions.ExtensionMethodes
+namespace LivraisonPointRelais.Extensions.ExtensionMethodes
 {
     public static class ObjetExtension
     {

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace HistoriqueAffectation.Data.Dto
+namespace LivraisonPointRelais.Data.Dto
 {
     public class ProduitDto
     {

@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
-using HistoriqueAffectation.Data.Dto;
-using HistoriqueAffectation.Model.Entites;
+using LivraisonPointRelais.Data.Dto;
+using LivraisonPointRelais.Model.Entites;
 
-namespace HistoriqueAffectation.Api.MapperProfiles
+namespace LivraisonPointRelais.Api.MapperProfiles
 {
     public class ProduitProfile: Profile
     {

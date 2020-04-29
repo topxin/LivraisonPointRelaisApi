@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace LivraisonPointRelais.Model.Migrations
 {
     [DbContext(typeof(LivraisonPointRelaisDbContext))]
-    [Migration("20200428220240_initialMigration")]
-    partial class initialMigration
+    [Migration("20200429211559_SeedDataUpdate_2020_04_29")]
+    partial class SeedDataUpdate_2020_04_29
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -18,7 +18,7 @@ namespace LivraisonPointRelais.Model.Migrations
             modelBuilder
                 .HasAnnotation("ProductVersion", "3.1.3");
 
-            modelBuilder.Entity("HistoriqueAffectation.Model.Entites.Client", b =>
+            modelBuilder.Entity("LivraisonPointRelais.Model.Entites.Client", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -63,7 +63,7 @@ namespace LivraisonPointRelais.Model.Migrations
                         });
                 });
 
-            modelBuilder.Entity("HistoriqueAffectation.Model.Entites.Livraison", b =>
+            modelBuilder.Entity("LivraisonPointRelais.Model.Entites.Livraison", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -111,7 +111,7 @@ namespace LivraisonPointRelais.Model.Migrations
                         });
                 });
 
-            modelBuilder.Entity("HistoriqueAffectation.Model.Entites.PointRelais", b =>
+            modelBuilder.Entity("LivraisonPointRelais.Model.Entites.PointRelais", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -157,7 +157,7 @@ namespace LivraisonPointRelais.Model.Migrations
                         });
                 });
 
-            modelBuilder.Entity("HistoriqueAffectation.Model.Entites.Produit", b =>
+            modelBuilder.Entity("LivraisonPointRelais.Model.Entites.Produit", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -209,27 +209,67 @@ namespace LivraisonPointRelais.Model.Migrations
                             Nom = "Canapé Angle",
                             NumeroCommande = "4U7JK8F",
                             SiteMarchandise = "BestBuy.eu"
+                        },
+                        new
+                        {
+                            Id = new Guid("09cda71a-6d75-4b6d-84b4-b0366ac40499"),
+                            ClientId = new Guid("0ee2bf8c-2d6e-43f3-aa03-568a418b580f"),
+                            Nom = "Tesla Model S",
+                            NumeroCommande = "4U7ML8F",
+                            SiteMarchandise = "AbDiscount.com"
+                        },
+                        new
+                        {
+                            Id = new Guid("eced6ac7-1fe2-4c5c-9ef3-e5d42e43ac50"),
+                            ClientId = new Guid("cec5d75e-0b5c-400b-a892-5f0cce618ee9"),
+                            Nom = "Apple Iphone 3S",
+                            NumeroCommande = "GG7ML8F",
+                            SiteMarchandise = "AbDiscount.com"
+                        },
+                        new
+                        {
+                            Id = new Guid("d9ca1214-6b4c-4e42-94ea-7ff9bb042997"),
+                            ClientId = new Guid("0ee2bf8c-2d6e-43f3-aa03-568a418b580f"),
+                            Nom = "Apple Watch 5",
+                            NumeroCommande = "GG7MLHF",
+                            SiteMarchandise = "AbDiscount.com"
+                        },
+                        new
+                        {
+                            Id = new Guid("2bcc2d4a-6c4b-44c7-8847-861cdf59e0fe"),
+                            ClientId = new Guid("0ee2bf8c-2d6e-43f3-aa03-568a418b580f"),
+                            Nom = "Polo Slim XL",
+                            NumeroCommande = "GGIJUHY",
+                            SiteMarchandise = "BestBuy.eu"
+                        },
+                        new
+                        {
+                            Id = new Guid("0669081c-df18-4510-9c95-614c4a4d91b4"),
+                            ClientId = new Guid("0ee2bf8c-2d6e-43f3-aa03-568a418b580f"),
+                            Nom = "Sac Montblanc",
+                            NumeroCommande = "IIKJUHY",
+                            SiteMarchandise = "BestBuy.eu"
                         });
                 });
 
-            modelBuilder.Entity("HistoriqueAffectation.Model.Entites.Livraison", b =>
+            modelBuilder.Entity("LivraisonPointRelais.Model.Entites.Livraison", b =>
                 {
-                    b.HasOne("HistoriqueAffectation.Model.Entites.PointRelais", "PointRelais")
+                    b.HasOne("LivraisonPointRelais.Model.Entites.PointRelais", "PointRelais")
                         .WithMany("Livraisons")
                         .HasForeignKey("IdPointRelais")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("HistoriqueAffectation.Model.Entites.Produit", "Produit")
+                    b.HasOne("LivraisonPointRelais.Model.Entites.Produit", "Produit")
                         .WithOne("Livraison")
-                        .HasForeignKey("HistoriqueAffectation.Model.Entites.Livraison", "IdProduit")
+                        .HasForeignKey("LivraisonPointRelais.Model.Entites.Livraison", "IdProduit")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("HistoriqueAffectation.Model.Entites.Produit", b =>
+            modelBuilder.Entity("LivraisonPointRelais.Model.Entites.Produit", b =>
                 {
-                    b.HasOne("HistoriqueAffectation.Model.Entites.Client", "Client")
+                    b.HasOne("LivraisonPointRelais.Model.Entites.Client", "Client")
                         .WithMany("produits")
                         .HasForeignKey("ClientId")
                         .OnDelete(DeleteBehavior.Cascade)

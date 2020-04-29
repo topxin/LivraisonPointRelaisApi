@@ -1,12 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
-using HistoriqueAffectation.Extensions.ExtensionMethodes;
-using HistoriqueAffectation.Model.Data;
-using HistoriqueAffectation.Model.Entites;
+using LivraisonPointRelais.Data.QueryParameters;
+using LivraisonPointRelais.Extensions.ExtensionMethodes;
+using LivraisonPointRelais.Model.Data;
+using LivraisonPointRelais.Model.Entites;
 using Microsoft.EntityFrameworkCore;
 
-namespace HistoriqueAffectation.Data.Repositories
+namespace LivraisonPointRelais.Data.Repositories
 {
     public class ProduitRepository:IProduitRepository
     {
@@ -17,9 +19,12 @@ namespace HistoriqueAffectation.Data.Repositories
             _context = context??throw new ArgumentNullException(nameof(context));
         }
 
-        public async Task<IEnumerable<Produit>> GetProduitsAsync()
+        public async Task<IEnumerable<Produit>> GetProduitsAsync(ProduitsParameters parameters)
         {
-            return await _context.Produits.ToListAsync();
+            return await _context.Produits
+                .Skip((parameters.PageNumber-1)*parameters.PageSize)
+                .Take(parameters.PageSize)
+                .ToListAsync();
         }
 
         public async Task<Produit> GetProduitAsync(Guid produitId)
