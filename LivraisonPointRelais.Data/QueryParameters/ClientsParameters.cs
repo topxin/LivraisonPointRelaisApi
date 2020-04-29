@@ -1,6 +1,6 @@
 ﻿namespace LivraisonPointRelais.Data.QueryParameters
 {
-    public class ProduitsParameters: QueryParameters
+    public class ClientsParameters: QueryParameters
     {
     }
 }

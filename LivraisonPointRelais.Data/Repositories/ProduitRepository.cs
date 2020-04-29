@@ -1,8 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using LivraisonPointRelais.Data.QueryParameters;
+using LivraisonPointRelais.Data.QueryParameters.ParametersHelper;
 using LivraisonPointRelais.Extensions.ExtensionMethodes;
 using LivraisonPointRelais.Model.Data;
 using LivraisonPointRelais.Model.Entites;
@@ -19,12 +18,10 @@ namespace LivraisonPointRelais.Data.Repositories
             _context = context??throw new ArgumentNullException(nameof(context));
         }
 
-        public async Task<IEnumerable<Produit>> GetProduitsAsync(ProduitsParameters parameters)
+        public async Task<PagedList<Produit>> GetProduitsAsync(ProduitsParameters parameters)
         {
-            return await _context.Produits
-                .Skip((parameters.PageNumber-1)*parameters.PageSize)
-                .Take(parameters.PageSize)
-                .ToListAsync();
+            var produits = await _context.Produits.ToListAsync();
+            return PagedList<Produit>.ToPagedList(produits, parameters.PageNumber, parameters.PageSize);
         }
 
         public async Task<Produit> GetProduitAsync(Guid produitId)

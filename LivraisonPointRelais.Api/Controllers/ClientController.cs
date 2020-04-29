@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using AutoMapper;
 using LivraisonPointRelais.Data.Dto;
+using LivraisonPointRelais.Data.QueryParameters;
 using LivraisonPointRelais.Data.Repositories;
 using Microsoft.AspNetCore.Mvc;
 
@@ -22,9 +23,9 @@ namespace LivraisonPointRelais.Api.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetClients()
+        public async Task<IActionResult> GetClients([FromQuery] ClientsParameters clientsParameters)
         {
-            var clients = await _clientRepository.GetClientsAsync();
+            var clients = await _clientRepository.GetClientsAsync(clientsParameters);
             var clientDtos = _mapper.Map<IEnumerable<ClientDto>>(clients);
             return Ok(clientDtos);
         }
