@@ -1,7 +1,0 @@
-C:\Users\s644760\Source\Repos\HistoriqueAffectation\HistoriqueAffectation.Entites\bin\Debug\netcoreapp3.1\HistoriqueAffectation.Entites.deps.json
-C:\Users\s644760\Source\Repos\HistoriqueAffectation\HistoriqueAffectation.Entites\bin\Debug\netcoreapp3.1\HistoriqueAffectation.Entites.dll
-C:\Users\s644760\Source\Repos\HistoriqueAffectation\HistoriqueAffectation.Entites\bin\Debug\netcoreapp3.1\HistoriqueAffectation.Entites.pdb
-C:\Users\s644760\Source\Repos\HistoriqueAffectation\HistoriqueAffectation.Entites\obj\Debug\netcoreapp3.1\HistoriqueAffectation.Entites.AssemblyInfoInputs.cache
-C:\Users\s644760\Source\Repos\HistoriqueAffectation\HistoriqueAffectation.Entites\obj\Debug\netcoreapp3.1\HistoriqueAffectation.Entites.AssemblyInfo.cs
-C:\Users\s644760\Source\Repos\HistoriqueAffectation\HistoriqueAffectation.Entites\obj\Debug\netcoreapp3.1\HistoriqueAffectation.Entites.dll
-C:\Users\s644760\Source\Repos\HistoriqueAffectation\HistoriqueAffectation.Entites\obj\Debug\netcoreapp3.1\HistoriqueAffectation.Entites.pdb

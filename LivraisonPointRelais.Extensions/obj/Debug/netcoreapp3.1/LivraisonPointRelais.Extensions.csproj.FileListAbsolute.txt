@@ -1,9 +1,0 @@
-C:\Users\s644760\Source\Repos\HistoriqueAffectation\HistoriqueAffectation.Extensions\bin\Debug\netcoreapp3.1\LivraisonPointRelais.Extensions.deps.json
-C:\Users\s644760\Source\Repos\HistoriqueAffectation\HistoriqueAffectation.Extensions\bin\Debug\netcoreapp3.1\LivraisonPointRelais.Extensions.dll
-C:\Users\s644760\Source\Repos\HistoriqueAffectation\HistoriqueAffectation.Extensions\bin\Debug\netcoreapp3.1\LivraisonPointRelais.Extensions.pdb
-C:\Users\s644760\Source\Repos\HistoriqueAffectation\HistoriqueAffectation.Extensions\obj\Debug\netcoreapp3.1\LivraisonPointRelais.Extensions.csprojAssemblyReference.cache
-C:\Users\s644760\Source\Repos\HistoriqueAffectation\HistoriqueAffectation.Extensions\obj\Debug\netcoreapp3.1\LivraisonPointRelais.Extensions.csproj.CoreCompileInputs.cache
-C:\Users\s644760\Source\Repos\HistoriqueAffectation\HistoriqueAffectation.Extensions\obj\Debug\netcoreapp3.1\LivraisonPointRelais.Extensions.AssemblyInfoInputs.cache
-C:\Users\s644760\Source\Repos\HistoriqueAffectation\HistoriqueAffectation.Extensions\obj\Debug\netcoreapp3.1\LivraisonPointRelais.Extensions.AssemblyInfo.cs
-C:\Users\s644760\Source\Repos\HistoriqueAffectation\HistoriqueAffectation.Extensions\obj\Debug\netcoreapp3.1\LivraisonPointRelais.Extensions.dll
-C:\Users\s644760\Source\Repos\HistoriqueAffectation\HistoriqueAffectation.Extensions\obj\Debug\netcoreapp3.1\LivraisonPointRelais.Extensions.pdb
