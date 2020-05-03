@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 using AutoMapper;
 using LivraisonPointRelais.Data.Dto;
 using LivraisonPointRelais.Data.QueryParameters;
 using LivraisonPointRelais.Data.Repositories;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 
 namespace LivraisonPointRelais.Api.Controllers
 {
@@ -27,6 +29,7 @@ namespace LivraisonPointRelais.Api.Controllers
         {
             var clients = await _clientRepository.GetClientsAsync(clientsParameters);
             var clientDtos = _mapper.Map<IEnumerable<ClientDto>>(clients);
+            Response.Headers.Add("X-Pagination", JsonConvert.SerializeObject(clients.GetMetadata()));
             return Ok(clientDtos);
         }
 

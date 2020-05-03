@@ -1,14 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Threading.Tasks;
 using LivraisonPointRelais.Data.QueryParameters;
+using LivraisonPointRelais.Data.QueryParameters.ParametersHelper;
 using LivraisonPointRelais.Model.Entites;
 
 namespace LivraisonPointRelais.Data.Repositories
 {
     public interface IClientRepository
     {
-        Task<IEnumerable<Client>> GetClientsAsync(ClientsParameters parameters);
+        Task<PagedList<Client>> GetClientsAsync(ClientsParameters parameters);
 
         Task<Client> GetClientAsync(Guid clientId);
 

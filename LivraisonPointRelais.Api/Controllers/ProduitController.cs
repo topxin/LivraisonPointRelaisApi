@@ -7,6 +7,7 @@ using LivraisonPointRelais.Data.QueryParameters;
 using LivraisonPointRelais.Data.Repositories;
 using LivraisonPointRelais.Extensions.ExtensionMethodes;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 
 namespace LivraisonPointRelais.Api.Controllers
 {
@@ -28,6 +29,7 @@ namespace LivraisonPointRelais.Api.Controllers
         {
             var produits = await _produitRepository.GetProduitsAsync(produitsParameters);
             var produitsDto = _mapper.Map<IEnumerable<ProduitDto>>(produits);
+            Response.Headers.Add("X-Pagination", JsonConvert.SerializeObject(produits.GetMetadata()));
             return Ok(produitsDto);
         }
 

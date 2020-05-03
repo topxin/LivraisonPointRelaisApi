@@ -10,6 +10,8 @@ namespace LivraisonPointRelais.Data.QueryParameters.ParametersHelper
         public int TotalPages { get; private set; }
         public int PageSize { get; private set; }
         public int TotalCount { get; private set; }
+        public bool HasNext => CurrentPage < TotalPages;
+        public bool HasPrevious => CurrentPage > 1;
 
         public PagedList(List<T> items, int count, int pageNumber, int pageSize)
         {
@@ -26,6 +28,19 @@ namespace LivraisonPointRelais.Data.QueryParameters.ParametersHelper
             var count = source.Count();
             var items = source.Skip((pageNumber - 1) * pageSize).Take(pageSize).ToList();
             return new PagedList<T>(items, count, pageNumber, pageSize);
+        }
+
+        public object GetMetadata()
+        {
+            return new
+            {
+                TotalCount,
+                PageSize,
+                CurrentPage,
+                TotalPages,
+                HasNext,
+                HasPrevious
+            };
         }
     }
 }

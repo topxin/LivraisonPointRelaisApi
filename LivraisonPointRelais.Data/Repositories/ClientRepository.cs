@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Threading.Tasks;
 using LivraisonPointRelais.Data.QueryParameters;
 using LivraisonPointRelais.Data.QueryParameters.ParametersHelper;
@@ -17,7 +16,7 @@ namespace LivraisonPointRelais.Data.Repositories
         {
             _context = context ?? throw new ArgumentNullException(nameof(context));
         }
-        public async Task<IEnumerable<Client>> GetClientsAsync(ClientsParameters parameters)
+        public async Task<PagedList<Client>> GetClientsAsync(ClientsParameters parameters)
         {
             var cilents = await _context.Clients.ToListAsync();
             return PagedList<Client>.ToPagedList(cilents, parameters.PageNumber, parameters.PageSize);
