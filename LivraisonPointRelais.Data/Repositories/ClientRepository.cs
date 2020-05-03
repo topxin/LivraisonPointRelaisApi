@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Threading.Tasks;
 using LivraisonPointRelais.Data.QueryParameters;
 using LivraisonPointRelais.Data.QueryParameters.ParametersHelper;
@@ -18,8 +20,18 @@ namespace LivraisonPointRelais.Data.Repositories
         }
         public async Task<PagedList<Client>> GetClientsAsync(ClientsParameters parameters)
         {
-            var cilents = await _context.Clients.ToListAsync();
-            return PagedList<Client>.ToPagedList(cilents, parameters.PageNumber, parameters.PageSize);
+            var clients = _context.Clients as IQueryable<Client>;
+            if (!string.IsNullOrWhiteSpace(parameters.Nom))
+            {
+                clients = clients.Where(c => c.Nom == parameters.Nom);
+            }
+
+            if (!string.IsNullOrWhiteSpace(parameters.Prenom))
+            {
+                clients = clients.Where(c => c.Prenom == parameters.Prenom);
+            }
+
+            return PagedList<Client>.ToPagedList(await clients.ToListAsync(), parameters.PageNumber, parameters.PageSize);
         }
 
         public async Task<Client> GetClientAsync(Guid clientId)

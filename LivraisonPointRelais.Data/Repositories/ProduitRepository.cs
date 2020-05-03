@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using LivraisonPointRelais.Data.QueryParameters;
 using LivraisonPointRelais.Data.QueryParameters.ParametersHelper;
@@ -20,8 +22,14 @@ namespace LivraisonPointRelais.Data.Repositories
 
         public async Task<PagedList<Produit>> GetProduitsAsync(ProduitsParameters parameters)
         {
-            var produits = await _context.Produits.ToListAsync();
-            return PagedList<Produit>.ToPagedList(produits, parameters.PageNumber, parameters.PageSize);
+            var produits = _context.Produits as IQueryable<Produit>;
+
+            if (!string.IsNullOrWhiteSpace(parameters.NumeroCommande))
+            {
+                produits = produits.Where(p => p.NumeroCommande == parameters.NumeroCommande);
+            }
+
+            return PagedList<Produit>.ToPagedList(await produits.ToListAsync(), parameters.PageNumber, parameters.PageSize);
         }
 
         public async Task<Produit> GetProduitAsync(Guid produitId)

@@ -2,5 +2,6 @@
 {
     public class ProduitsParameters: QueryParameters
     {
+        public string NumeroCommande { get; set; }
     }
 }
