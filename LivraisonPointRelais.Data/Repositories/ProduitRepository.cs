@@ -29,6 +29,8 @@ namespace LivraisonPointRelais.Data.Repositories
                 produits = produits.Where(p => p.NumeroCommande == parameters.NumeroCommande);
             }
 
+            produits = !string.IsNullOrWhiteSpace(parameters.OrderBy) ? produits.ApplySort(parameters.OrderBy) : produits.OrderBy(c => c.Nom);
+
             return PagedList<Produit>.ToPagedList(await produits.ToListAsync(), parameters.PageNumber, parameters.PageSize);
         }
 

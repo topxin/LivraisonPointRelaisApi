@@ -4,6 +4,7 @@ using System.Security.Cryptography.X509Certificates;
 using System.Threading.Tasks;
 using LivraisonPointRelais.Data.QueryParameters;
 using LivraisonPointRelais.Data.QueryParameters.ParametersHelper;
+using LivraisonPointRelais.Extensions.ExtensionMethodes;
 using LivraisonPointRelais.Model.Data;
 using LivraisonPointRelais.Model.Entites;
 using Microsoft.EntityFrameworkCore;
@@ -37,6 +38,8 @@ namespace LivraisonPointRelais.Data.Repositories
                 clients = clients.Where(c => c.Nom.ToLower().Contains(searchingTextFormatted) 
                                              || c.Prenom.Contains(searchingTextFormatted));
             }
+
+            clients = !string.IsNullOrWhiteSpace(parameters.OrderBy) ? clients.ApplySort(parameters.OrderBy) : clients.OrderBy(c => c.Nom);
 
             return PagedList<Client>.ToPagedList(await clients.ToListAsync(), parameters.PageNumber, parameters.PageSize);
         }
