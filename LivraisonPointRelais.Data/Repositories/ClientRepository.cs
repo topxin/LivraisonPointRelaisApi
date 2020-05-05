@@ -31,6 +31,13 @@ namespace LivraisonPointRelais.Data.Repositories
                 clients = clients.Where(c => c.Prenom == parameters.Prenom);
             }
 
+            if (!string.IsNullOrWhiteSpace(parameters.Searching))
+            {
+                var searchingTextFormatted = parameters.Searching.Trim().ToLower();
+                clients = clients.Where(c => c.Nom.ToLower().Contains(searchingTextFormatted) 
+                                             || c.Prenom.Contains(searchingTextFormatted));
+            }
+
             return PagedList<Client>.ToPagedList(await clients.ToListAsync(), parameters.PageNumber, parameters.PageSize);
         }
 
