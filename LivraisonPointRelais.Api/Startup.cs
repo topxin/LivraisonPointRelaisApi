@@ -25,8 +25,11 @@ namespace LivraisonPointRelais.Api
         {
             services.AddControllers();
             services.AddAutoMapper(typeof(ProduitProfile), typeof(ClientProfile));
+
             services.AddScoped<IClientRepository, ClientRepository>()
-                    .AddScoped<IProduitRepository, ProduitRepository>();
+                    .AddScoped<IProduitRepository, ProduitRepository>()
+                    .AddScoped<IPointRelaisRepository, PointRelaisRepository>();
+
             services.AddDbContext<LivraisonPointRelaisDbContext>(
                 options => options.UseSqlite("Data Source=LivraisonPointRelais.db"));
         }
